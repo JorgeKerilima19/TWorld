@@ -1,6 +1,6 @@
-import { Card } from "..";
+import { HomeCard } from "./HomeCard";
 
-import img from "/1.svg";
+import img from "/featuresSVG/JsFeature1.svg";
 
 const features = [
   {
@@ -39,7 +39,7 @@ export const Features = () => {
       <div className="pl-10 grid gap-10 xl:grid-cols-2 bg-gray-100">
         <div className="grid lg:grid-cols-2 gap-20 py-16">
           {features.map((feature, index) => (
-            <Card key={index} feature={feature} />
+            <HomeCard key={index} feature={feature} />
           ))}
         </div>
       </div>

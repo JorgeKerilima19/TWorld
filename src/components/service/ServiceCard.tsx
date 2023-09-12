@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { ChildProps } from "./Interfaces";
+import { ChildProps } from "../Interfaces";
 
-export const Card = ({ feature }: ChildProps) => {
+export const ServiceCard = ({ feature }: ChildProps) => {
   return (
     <article className="w-full sm:w-80 bg-gray-200 relative flex flex-col items-start gap-5 p-5 rounded-lg hover:transform hover:translate-y-[-2%] transition duration-300 ">
       <img src={feature.img} alt="" />

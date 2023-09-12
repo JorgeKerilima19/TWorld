@@ -80,12 +80,7 @@ export const Navbar = () => {
             DNews
           </h1>
         </NavLink>
-        <Link
-          onClick={() => {
-            backToTop();
-            handleSmallMenuDisplay();
-          }}
-          to="/contact"
+        <div
           className={`flex flex-col md:flex-row items-center justify-between gap-4 md:gap-7 md:pr-4 lg:pr-10 ${
             showNavbar ? "" : "md:hidden"
           } h-3/4 md:h-auto`}
@@ -191,7 +186,7 @@ export const Navbar = () => {
           <button className="bg-transparent hover:bg-red-700 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent hover border-b-red-700 border-b-2 rounded">
             Chat with Us
           </button>
-        </Link>
+        </div>
       </nav>
       <div
         className={`${

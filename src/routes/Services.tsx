@@ -1,5 +1,5 @@
-import img from "/1.svg";
-import { Card } from "../components";
+import img from "/featuresSVG/JsFeature1.svg";
+import { ServiceCard } from "../components/service";
 
 const services = [
   {
@@ -69,7 +69,7 @@ export const Services = () => {
             <header className="text-4xl font-semibold">{el.title}</header>
             <div className="w-full flex gap-10 flex-wrap">
               {el.chars.map((char, index) => (
-                <Card key={index} feature={char} />
+                <ServiceCard key={index} feature={char} />
               ))}
             </div>
           </article>
