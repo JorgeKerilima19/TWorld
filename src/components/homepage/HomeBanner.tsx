@@ -9,7 +9,9 @@ export const HomeBanner = () => {
         <img className="w-full h-full object-cover absolute" src={img} alt="" />
       </div>
       <div className="pl-10 flex text-7xl gap-2 flex-wrap">
-        <span>Info for those </span>
+        <span className="tracking-wide md:tracking-widest">
+          Info for those{" "}
+        </span>
         <TypewriterComponent
           options={{
             strings: ["Smart", "Worried"],

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import backToTop from "../helpers/backToTop";
@@ -77,7 +77,7 @@ export const Navbar = () => {
               showNavbar ? "" : "text-white"
             }`}
           >
-            DNews
+            TWorld
           </h1>
         </NavLink>
         <div

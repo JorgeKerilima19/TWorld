@@ -4,8 +4,10 @@ export const AboutHome = () => {
   return (
     <>
       <div className="w-full md:w-2/5 flex flex-col gap-12">
-        <h3 className="text-4xl font-semibold">More than just apps</h3>
-        <p>
+        <h3 className="text-4xl font-semibold tracking-wider">
+          More than just apps
+        </h3>
+        <p className="text-gray-600 font-light tracking-widest">
           Praesent consequat elit sed erat pharetra, quis ullamcorper dolor
           dignissim. Sed gravida efficitur purus sed lacinia. Pellentesque
           gravida lacus mauris, scelerisque bibendum nisi scelerisque id. Sed
@@ -17,8 +19,8 @@ export const AboutHome = () => {
           <img src={reactLogo} alt="" />
         </div>
       </div>
-      <div className="w-full md:w-2/5">
-        <p className="pb-10">
+      <div className="w-full md:w-2/5 text-gray-600 font-light tracking-widest">
+        <p className="pb-10 ">
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Proin ultrices dui eu efficitur dictum.
           Integer enim dolor, mattis ac risus nec, iaculis bibendum mauris. In

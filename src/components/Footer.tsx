@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="flex gap-2 items-center">
             <img src={logo} alt="logo" width={50} />
             <h1 className={`text-black-50 font-bold text-2xl text-white`}>
-              DNews
+              TWorld
             </h1>
           </div>
         </div>

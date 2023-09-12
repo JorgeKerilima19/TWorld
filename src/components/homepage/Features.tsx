@@ -28,7 +28,7 @@ export const Features = () => {
     <div className="flex flex-col gap-20">
       <div className="pl-10 flex flex-wrap gap-16">
         <h3 className="text-4xl pr-5 font-medium self-start">Why Choose Us?</h3>
-        <p className="text-lg font-light w-full md:w-3/5 lg:w-3/5">
+        <p className="text-lg font-light w-full md:w-3/5 lg:w-3/5 text-gray-500">
           Aliquam ultrices arcu vel odio malesuada maximus. Proin congue augue
           ligula. Nulla ut urna enim. Sed mollis ante vulputate odio imperdiet,
           nec maximus nisi placerat. Donec sed tempor sem. Suspendisse convallis
@@ -36,7 +36,7 @@ export const Features = () => {
           diam. Proin eget tortor venenatis ex consectetur blandit.{" "}
         </p>
       </div>
-      <div className="pl-10 grid gap-10 xl:grid-cols-2 bg-gray-100">
+      <div className="p-0 sm:pl-10 grid gap-10 xl:grid-cols-2 bg-gray-100">
         <div className="grid lg:grid-cols-2 gap-20 py-16">
           {features.map((feature, index) => (
             <HomeCard key={index} feature={feature} />
