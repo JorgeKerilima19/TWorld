@@ -6,6 +6,9 @@ export default {
       minHeight: {
         vh: "calc(100vh - var(--header-height))",
       },
+      maxWidth: {
+        footerItem: "12rem",
+      },
       minWidth: {
         footerItem: "10rem",
         img: "45%",

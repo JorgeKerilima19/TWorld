@@ -32,6 +32,9 @@
 .cont:hover .title {
   color: #b91c1c;
 }
+.bg-gradient-newsletter {
+  background: linear-gradient(180deg, #ffffff 80%, #b91c1c 10%);
+}
 @media (min-width: 768px) {
   .hamburger-menu {
     display: none;

@@ -1,12 +1,11 @@
+import { Newsletter } from ".";
 import logo from "../assets/images/logoWhite.svg";
 
 export const Footer = () => {
   return (
-    <footer className="relative w-full bottom-0 py-10 bg-red-700 text-white">
-      <div className="absolute transform translate-y-[-40px] translate-x-[50%] bg-green-700 w-6/12">
-        NewsLetter
-      </div>
-      <div className="flex flex-col px-7 gap-4">
+    <footer className="relative w-full bottom-0 pb-10 bg-red-700 text-white">
+      <Newsletter />
+      <div className="pt-8 md:pt-10 flex flex-col px-7 gap-4">
         <div className="flex justify-between border-b-2 border-b-white pb-4">
           <div className="flex gap-2 items-center">
             <img src={logo} alt="logo" width={50} />
