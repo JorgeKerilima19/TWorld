@@ -4,7 +4,7 @@ import handStop from "/handStop.svg";
 export const Newsletter = () => {
   return (
     <div className="static flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-newsletter border-2 border-red-700 text-black p-5 pt-10 min-w-full">
-      <div className="grid gap-5 max-w-xl">
+      <div className="grid gap-5 max-w-xl tracking-wider">
         <h3 className="text-3xl tracking-wider text-red-700 font-semibold">
           Subscribe to our newsletter
         </h3>
@@ -28,15 +28,15 @@ export const Newsletter = () => {
         </form>
       </div>
       <div className="flex gap-10 md:gap-5 md:self-end">
-        <div className="grid gap-2 max-w-footerItem bg-white p-5 rounded-xl text-black">
+        <div className="grid gap-2 max-w-footerItem bg-white p-5 rounded-xl text-black tracking-wider">
           <img className="w-1/5" src={date} alt="" />
           <h4 className="text-lg font-semibold">No Span</h4>
           <span>News blog posts every week</span>
         </div>
-        <div className="grid gap-2 max-w-footerItem bg-white p-5 rounded-xl text-black">
+        <div className="grid gap-2 max-w-footerItem bg-white p-5 rounded-xl text-black tracking-wider">
           <img className="w-1/5" src={handStop} alt="" />
           <h4 className="text-lg font-semibold">No Span</h4>
-          <span>News blog posts every week</span>
+          <span>The subscription will only use for the listed purposes</span>
         </div>
       </div>
     </div>

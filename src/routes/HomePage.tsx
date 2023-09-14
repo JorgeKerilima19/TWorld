@@ -4,7 +4,7 @@ import { Clients, Invitation } from "../components";
 export const HomePage = () => {
   return (
     <>
-      <section className="relative min-h-vh flex flex-col justify-center gap-12">
+      <section className="relative min-h-screen flex flex-col justify-center gap-12">
         <HomeBanner />
       </section>
       <section className="relative min-h-vh flex flex-col justify-center gap-12 pt-20">

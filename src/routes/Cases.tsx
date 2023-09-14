@@ -1,4 +1,5 @@
-import { CasesList } from "../components/cases";
+import { CaseCard } from "../components/cases";
+import { caseStudies } from "../helpers/data/caseStudies";
 
 export const Cases = () => {
   return (
@@ -13,7 +14,9 @@ export const Cases = () => {
         </div>
       </section>
       <div>
-        <CasesList />
+        {caseStudies.map((feature, index) => (
+          <CaseCard key={index} feature={feature} />
+        ))}
       </div>
     </>
   );
