@@ -35,8 +35,26 @@
 .bg-gradient-newsletter {
   background: linear-gradient(180deg, #ffffff 80%, #b91c1c 10%);
 }
+
 @media (min-width: 768px) {
   .hamburger-menu {
     display: none;
+  }
+  .navItem-hover {
+    position: relative;
+  }
+  .navItem-hover::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    height: 0.1rem;
+    background-color: #b91c1c;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    transition: 0.5s;
+  }
+  .navItem-hover:hover::after {
+    width: 100%;
   }
 }

@@ -5,6 +5,15 @@ import backToTop from "../helpers/backToTop";
 
 import logo from "../assets/images/logo.svg";
 
+const menuItems = [
+  { to: "/cases", label: "Cases" },
+  { to: "/services", label: "Services" },
+  { to: "/about", label: "About us" },
+  { to: "/careers", label: "Careers" },
+  { to: "/blog", label: "Blog" },
+  { to: "/contact", label: "Contact us" },
+];
+
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
   const [prevScrollY, setPrevScrollY] = useState(0);
@@ -86,102 +95,24 @@ export const Navbar = () => {
           } h-3/4 md:h-auto`}
         >
           <ul className="flex flex-col md:flex-row gap-5 lg:gap-10 items-center">
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/cases"}
-              >
-                Cases
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/services"}
-              >
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/about"}
-              >
-                About us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/careers"}
-              >
-                Careers
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/blog"}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={() => {
-                  backToTop();
-                  handleSmallMenuDisplay();
-                }}
-                className={(classname) =>
-                  classname.isActive
-                    ? "px-2 border-b-red-700 border-b-2"
-                    : "px-2"
-                }
-                to={"/contact"}
-              >
-                Contact us
-              </NavLink>
-            </li>
+            {menuItems.map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  onClick={() => {
+                    backToTop();
+                    handleSmallMenuDisplay();
+                  }}
+                  className={(classname) =>
+                    classname.isActive
+                      ? "px-2 border-b-red-700 border-b-2"
+                      : "px-2 navItem-hover"
+                  }
+                  to={item.to}
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
           <button className="bg-transparent hover:bg-red-700 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent hover border-b-red-700 border-b-2 rounded">
             Chat with Us
