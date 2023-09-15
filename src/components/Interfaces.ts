@@ -1,5 +1,11 @@
 export interface ChildProps {
-  feature: { title: string; img: any; description: string; tag?: string[] };
+  feature: {
+    id?: number | undefined;
+    title: string;
+    img: any;
+    description: string;
+    tag?: string[];
+  };
 }
 export interface JobApplication {
   jobTitle: string;

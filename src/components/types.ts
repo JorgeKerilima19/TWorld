@@ -1,8 +1,9 @@
 export type infoType = {
+  id: number;
   title: string;
   img: any;
   description: string;
-  tag?: string[];
+  tag: string[];
 };
 
 export type teamMember = {
