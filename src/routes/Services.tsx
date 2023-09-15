@@ -1,5 +1,6 @@
 import img from "/featuresSVG/JsFeature1.svg";
 import { ServiceCard } from "../components/service";
+import { Clients, Invitation } from "../components";
 
 const services = [
   {
@@ -64,9 +65,16 @@ export const Services = () => {
         <img src={img} alt="" />
       </div>
       <div className="grid gap-y-20 w-full">
-        {services.map((el) => (
-          <article key={el.title} className="grid gap-y-20">
-            <header className="text-4xl font-semibold">{el.title}</header>
+        {services.map((el, index) => (
+          <article
+            key={index}
+            className={`md:pl-10 py-16 grid gap-y-20 ${
+              index % 2 === 0 ? "bg-gray-100" : ""
+            }`}
+          >
+            <header className="pl-10 md:pl-0 text-4xl font-semibold">
+              {el.title}
+            </header>
             <div className="w-full flex gap-10 flex-wrap">
               {el.chars.map((char, index) => (
                 <ServiceCard key={index} feature={char} />
@@ -75,6 +83,8 @@ export const Services = () => {
           </article>
         ))}
       </div>
+      <Clients />
+      <Invitation />
     </section>
   );
 };
