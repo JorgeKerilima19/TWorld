@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 import backToTop from "../helpers/backToTop";
 
@@ -14,68 +13,16 @@ const menuItems = [
   { to: "/contact", label: "Contact us" },
 ];
 
-export const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState<boolean>(true);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-
-  const [showSmallMenu, setShowSmallMenu] = useState(true);
-
-  const handleSmallMenuDisplay = () => {
-    if (window.innerWidth > 768) {
-      setShowSmallMenu(true);
-    } else {
-      setShowSmallMenu((showSmallMenu) => !showSmallMenu);
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
-
-      setPrevScrollY(currentScrollY);
-    };
-
-    const handleResize = () => {
-      const windowWidth = window.innerWidth;
-      if (windowWidth > 768) {
-        setShowSmallMenu(true);
-      } else {
-        setShowSmallMenu(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, [prevScrollY]);
-
+export const Navbar = ({ showNavbar, handleNav }: any) => {
   return (
     <>
       <nav
-        className={`bg-white w-full z-10 shadow-sm shadow-red-700 fixed top-0 flex flex-col md:flex-row transform h-full md:h-20 overflow-auto ${
-          showSmallMenu
-            ? "md:-translate-x-0 active"
-            : "transform -translate-x-[100%]"
-        } ${
-          !showNavbar
-            ? "md:-translate-x-0 md:-translate-y-16 md:border-b-red-700 border-b-2 md:bg-red-700"
-            : "bg-white "
-        } transition-transform duration-1000 ease-in-out p-2 justify-between gap-4`}
+        className={`max-w-screen-2xl w-full top-0 flex flex-col md:flex-row transform h-full md:h-20 overflow-auto p-2 justify-between gap-4`}
       >
         <NavLink
           onClick={() => {
             backToTop();
-            handleSmallMenuDisplay();
+            handleNav;
           }}
           to={"/"}
           className="flex gap-2 items-center"
@@ -100,7 +47,7 @@ export const Navbar = () => {
                 <NavLink
                   onClick={() => {
                     backToTop();
-                    handleSmallMenuDisplay();
+                    handleNav();
                   }}
                   className={(classname) =>
                     classname.isActive
@@ -119,28 +66,6 @@ export const Navbar = () => {
           </button>
         </div>
       </nav>
-      <div
-        className={`${
-          showSmallMenu ? "active" : ""
-        } hamburger-menu bg-white border-red-700 border-2 rounded-full place-items-center fixed bottom-4`}
-        onClick={handleSmallMenuDisplay}
-      >
-        <span
-          className={`${
-            showSmallMenu ? "active" : ""
-          } hamburger__bar bg-red-700`}
-        ></span>
-        <span
-          className={`${
-            showSmallMenu ? "active" : ""
-          } hamburger__bar bg-red-700`}
-        ></span>
-        <span
-          className={`${
-            showSmallMenu ? "active" : ""
-          } hamburger__bar bg-red-700`}
-        ></span>
-      </div>
     </>
   );
 };
