@@ -1,6 +1,6 @@
 import img from "/featuresSVG/JsFeature1.svg";
 import { ServiceCard } from "../components/service";
-import { Clients, Invitation } from "../components";
+import { Clients, Invitation, Technologies } from "../components";
 
 const services = [
   {
@@ -63,6 +63,7 @@ export const Services = () => {
           </span>
         </div>
         <img src={img} alt="" />
+        <Technologies />
       </div>
       <div className="grid gap-y-20 w-full">
         {services.map((el, index) => (

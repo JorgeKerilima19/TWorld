@@ -1,11 +1,11 @@
 import img1 from "../assets/images/dev1.jpg";
 import img2 from "../assets/images/dev2.jpg";
-import { Clients, Team } from "../components";
+import { Clients, Team, Technologies } from "../components";
 
 export const About = () => {
   return (
     <>
-      <section className="min-h-screen md:min-h-vh flex gap-10 items-center">
+      <section className="relative min-h-screen md:min-h-vh flex gap-10 items-center">
         <div className="flex flex-col gap-10">
           <h2 className="text-6xl">About Us</h2>
           <span className="font-light text-lg">
@@ -13,6 +13,7 @@ export const About = () => {
             tempus purus. Morbi semper, Lorem ipsum dolor sit, amet consectetur
             adipisicing elit. Et itaque sint eveniet asperiores.
           </span>
+          <Technologies />
         </div>
       </section>
       <h3 className="text-3xl bg-gray-200 px-5 md:px-16 py-12">

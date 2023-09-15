@@ -1,4 +1,4 @@
-import { Invitation } from "../components";
+import { Invitation, Technologies } from "../components";
 import { CaseCard } from "../components/cases";
 import { caseStudies } from "../helpers/data/caseStudies";
 
@@ -21,6 +21,7 @@ export const Cases = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
             tempus purus. Morbi semper, augue.
           </span>
+          <Technologies />
         </div>
       </section>
       <div className="grid md:grid-cols-2 place-items-center pt-16">
