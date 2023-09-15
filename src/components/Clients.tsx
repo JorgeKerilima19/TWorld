@@ -16,8 +16,8 @@ export const Clients = () => {
       <div className="flex justify-center gap-12 flex-wrap">
         <img className="w-32" src={googleLogo} alt="google" />
         <img className="w-32" src={toggleLogo} alt="toggle" />
-        <img className="w-32" src={amazonLogo} alt="toggle" />
-        <img className="w-32" src={diggLogo} alt="toggle" />
+        <img className="w-32" src={amazonLogo} alt="amazon" />
+        <img className="w-32" src={diggLogo} alt="digg" />
       </div>
     </section>
   );
