@@ -1,4 +1,7 @@
 import reactLogo from "/react.svg";
+import vueLogo from "/vue.svg";
+import nodeLogo from "/node.svg";
+import typeScriptLogo from "/typeScript.svg";
 
 export const AboutHome = () => {
   return (
@@ -15,8 +18,11 @@ export const AboutHome = () => {
           dictum odio fermentum lobortis. Vestibulum dapibus quam quis arcu
           rutrum, non tempor felis finibus.
         </p>
-        <div>
-          <img src={reactLogo} alt="" />
+        <div className="flex gap-5 flex-wrap">
+          <img className="w-12" src={reactLogo} alt="react" />
+          <img className="w-12" src={vueLogo} alt="react" />
+          <img className="w-12" src={nodeLogo} alt="react" />
+          <img className="w-12" src={typeScriptLogo} alt="react" />
         </div>
       </div>
       <div className="w-full md:w-2/5 text-gray-600 font-light tracking-widest">
