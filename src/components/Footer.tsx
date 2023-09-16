@@ -4,6 +4,7 @@ import logo from "../assets/images/logoWhite.svg";
 import youtubeLogo from "/youtube.svg";
 import instagramLogo from "/instagram.svg";
 import twitterLogo from "/twitter.svg";
+import FooterItems from "./FooterItems";
 
 const footerElements = [
   {
@@ -44,6 +45,7 @@ export const Footer = () => {
             </h1>
           </div>
         </div>
+        <FooterItems />
         <div className="flex gap-5 flex-wrap justify-between w-full">
           {footerElements.map((el, index) => (
             <div
