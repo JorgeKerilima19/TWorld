@@ -4,28 +4,45 @@ import logo from "../assets/images/logoWhite.svg";
 import youtubeLogo from "/youtube.svg";
 import instagramLogo from "/instagram.svg";
 import twitterLogo from "/twitter.svg";
-import FooterItems from "./FooterItems";
+import FooterDetailsItems from "./FooterDetailsItems";
 
-const footerElements = [
+const footerElements: {
+  title: string;
+  items: string[] | Object;
+}[] = [
   {
     title: "Contact",
     items: ["Lima-Peru", "Buenos Aires-Argentina", "Wakanda-Unknown"],
   },
   {
     title: "Call us",
-    items: [
-      {
-        Peru: "+5192245624",
-        Argentina: "+08712455224",
-        Wakanda: "+00144578",
-      },
-    ],
+    items: {
+      Peru: "+5192245624",
+      Argentina: "+08712455224",
+      Wakanda: "+00144578",
+    },
   },
   {
     title: "Company",
     items: ["Cases", "Services", "Blog", "Careers", "Contact", "About us"],
   },
 ];
+
+const detailsElements = {
+  Title: "Details",
+  Items: {
+    Technologies: ["JavaScript", "Node Js", "TypeScript", "React js", "Vue js"],
+    Developers: [
+      "Web developer",
+      "Design developers",
+      "React Developer",
+      "Web app developer",
+      "Data analyst",
+    ],
+    Careers: ["Hiring", "About Us"],
+    Cities: ["Lima", "Buenos Aires", "London"],
+  },
+};
 
 export const Footer = () => {
   return (
@@ -45,50 +62,40 @@ export const Footer = () => {
             </h1>
           </div>
         </div>
-        <FooterItems />
         <div className="flex gap-5 flex-wrap justify-between w-full">
           {footerElements.map((el, index) => (
             <div
               key={index}
               className="gap-5 grid place-content-start min-w-footerItem"
             >
-              <h3 className="text-lg font-semibold ">{el.title}</h3>
+              <h3 className="text-lg font-semibold">{el.title}</h3>
               <ul className="grid gap-5">
-                {el.items.map((item) => {
-                  if (typeof item !== "object") {
-                    return <li key={item}>{item}</li>;
-                  }
-                  return Object.entries(item).map(([key, value], index) => (
-                    <div key={index} className="grid gap-2">
-                      <span>{key}: </span>
-                      <span>{value}</span>
-                    </div>
-                  ));
-                })}
+                {Array.isArray(el.items) ? (
+                  <>
+                    {el.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {Object.entries(el.items).map(([key, value], index) => (
+                      <li key={index}>
+                        <span>{key} :</span>
+                        <span>{value}</span>
+                      </li>
+                    ))}
+                  </>
+                )}
               </ul>
             </div>
           ))}
-          <div className="min-w-footerItem flex flex-col gap-5">
-            <h3 className="text-lg font-semibold border-b-2 border-b-white">
-              Details
-            </h3>
-            <ul className="grid gap-4">
-              <li className="border-b-2 border-b-transparent hover:border-b-red-100">
-                Services
-              </li>
-              <li className="border-b-2 border-b-transparent hover:border-b-red-100">
-                Technologies
-              </li>
-              <li className="border-b-2 border-b-transparent hover:border-b-red-100">
-                Developers
-              </li>
-              <li className="border-b-2 border-b-transparent hover:border-b-red-100">
-                Careers
-              </li>
-              <li className="border-b-2 border-b-transparent hover:border-b-red-100">
-                Cities we are in
-              </li>
-            </ul>
+          <div className="grid gap-3 min-w-footerItem place-content-start">
+            <h3 className="text-lg font-semibold">{detailsElements.Title}</h3>
+            {Object.entries(detailsElements.Items).map(([key, value]) => (
+              <ul className="grid gap-1">
+                <FooterDetailsItems key={key} attribute={key} value={value} />
+              </ul>
+            ))}
           </div>
         </div>
       </div>
