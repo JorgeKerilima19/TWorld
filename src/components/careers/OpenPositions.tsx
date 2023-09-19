@@ -1,3 +1,5 @@
+import arrowRight from "/rightArrow.svg";
+
 import { Link } from "react-router-dom";
 
 import { availableJobs } from "../../helpers/data/openPositions";
@@ -12,13 +14,18 @@ export const OpenPositions = () => {
           to the same
         </p>
       </div>
-      <div className="pt-16 w-full grid gap-5 md:w-4/5 m-auto">
+      <div className="relative pt-16 w-full grid gap-5 md:w-4/5 m-auto">
         {availableJobs.map((el, index) => (
           <article
             key={index}
-            className="border-2 grid md:grid-cols-2 text-lg p-3 md:p-5 gap-5"
+            className="career-container relative border-2 grid md:grid-cols-2 text-lg p-3 md:p-5 gap-5"
           >
-            <div className="grid gap-2">
+            <img
+              src={arrowRight}
+              alt="arrow"
+              className="w-8 absolute career-arrow hidden md:block"
+            />
+            <div className="grid gap-2 transition duration-500">
               <header className="font-semibold text-xl">{el.jobTitle}</header>
               <span className="text-base text-green-800 font-medium">
                 {el.department}

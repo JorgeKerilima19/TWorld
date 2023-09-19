@@ -39,6 +39,16 @@
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(119deg)
     brightness(105%) contrast(104%);
 }
+.career-container:hover .career-arrow {
+  transform: translate(-2rem, 50%);
+  opacity: 1;
+}
+.career-arrow {
+  bottom: 50%;
+  transform: translate(-5rem, 50%);
+  transition: transform 0.5s, opacity 0.3s;
+  opacity: 0;
+}
 
 @media (min-width: 768px) {
   .hamburger-menu {
