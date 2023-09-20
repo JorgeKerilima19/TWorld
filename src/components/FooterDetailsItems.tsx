@@ -23,7 +23,7 @@ const FooterDetailsItems = ({ attribute, value }: any) => {
         } overflow-hidden`}
       >
         {value.map((el: any) => (
-          <li>{el}</li>
+          <li key={el}>{el}</li>
         ))}
       </ul>
     </>

@@ -78,10 +78,11 @@ export const Footer = () => {
               <ul className="grid gap-5">
                 {Array.isArray(el.items) ? (
                   <>
-                    {el.items.map((item) => {
+                    {el.items.map((item, index) => {
                       if (el.title === "Company") {
                         return (
                           <Link
+                            key={index}
                             to=""
                             className="hover:after:w-5/6 relative after:-bottom-1 after:left-0 after:content[''] after:h-[2px] after:0 after:absolute after:bg-white"
                           >
@@ -91,7 +92,7 @@ export const Footer = () => {
                       }
 
                       return (
-                        <li key={item} className="">
+                        <li key={index} className="">
                           {item}
                         </li>
                       );
@@ -112,11 +113,13 @@ export const Footer = () => {
           ))}
           <div className="grid gap-3 min-w-footerItem place-content-start">
             <h3 className="text-lg font-semibold">{detailsElements.Title}</h3>
-            {Object.entries(detailsElements.Items).map(([key, value]) => (
-              <ul className="grid gap-1">
-                <FooterDetailsItems key={key} attribute={key} value={value} />
-              </ul>
-            ))}
+            {Object.entries(detailsElements.Items).map(
+              ([key, value], index) => (
+                <ul key={index} className="grid gap-1">
+                  <FooterDetailsItems attribute={key} value={value} />
+                </ul>
+              )
+            )}
           </div>
         </div>
       </div>

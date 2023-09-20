@@ -12,7 +12,12 @@ const breakPoints = [
 
 export const CasesList = () => {
   return (
-    <Carousel isRTL={false} breakPoints={breakPoints} itemPadding={[0, 10]}>
+    <Carousel
+      className="w-full"
+      isRTL={false}
+      breakPoints={breakPoints}
+      itemPadding={[0, 10]}
+    >
       {caseStudies.map((feature, index) => (
         <CaseCard key={index} feature={feature} />
       ))}

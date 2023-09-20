@@ -49,6 +49,9 @@
   transition: transform 0.5s, opacity 0.3s;
   opacity: 0;
 }
+.bqCWu {
+  background-color: red;
+}
 
 @media (min-width: 768px) {
   .hamburger-menu {

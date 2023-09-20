@@ -1,6 +1,7 @@
 import img1 from "../assets/images/dev1.jpg";
 import img2 from "../assets/images/dev2.jpg";
-import { Clients, Team, Technologies } from "../components";
+import { Clients, Invitation, Team, Technologies } from "../components";
+import { CasesList } from "../components/cases";
 
 export const About = () => {
   return (
@@ -36,6 +37,9 @@ export const About = () => {
       </div>
       <Clients />
       <Team />
+      <h3 className="text-5xl pb-16 font-semibold">Our Projects</h3>
+      <CasesList />
+      <Invitation />
     </>
   );
 };
