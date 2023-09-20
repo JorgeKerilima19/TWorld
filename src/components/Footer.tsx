@@ -1,6 +1,8 @@
 import { Newsletter } from ".";
 import logo from "../assets/images/logoWhite.svg";
 
+import { Link } from "react-router-dom";
+
 import youtubeLogo from "/youtube.svg";
 import instagramLogo from "/instagram.svg";
 import twitterLogo from "/twitter.svg";
@@ -51,7 +53,11 @@ export const Footer = () => {
       <div className="pt-8 md:pt-10 flex flex-col px-7 gap-4">
         <div className="min-w-footerItem flex gap-5">
           <img className="w-8 filter-white" src={youtubeLogo} alt="youtube" />
-          <img className="w-8 filter-white" src={instagramLogo} alt="instagram" />
+          <img
+            className="w-8 filter-white"
+            src={instagramLogo}
+            alt="instagram"
+          />
           <img className="w-8 filter-white" src={twitterLogo} alt="twitter" />
         </div>
         <div className="flex justify-between border-b-2 border-b-white pb-4">
@@ -72,9 +78,24 @@ export const Footer = () => {
               <ul className="grid gap-5">
                 {Array.isArray(el.items) ? (
                   <>
-                    {el.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
+                    {el.items.map((item) => {
+                      if (el.title === "Company") {
+                        return (
+                          <Link
+                            to=""
+                            className="hover:after:w-5/6 relative after:-bottom-1 after:left-0 after:content[''] after:h-[2px] after:0 after:absolute after:bg-white"
+                          >
+                            {item}
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <li key={item} className="">
+                          {item}
+                        </li>
+                      );
+                    })}
                   </>
                 ) : (
                   <>
