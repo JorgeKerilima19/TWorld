@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/*------------------------Elastic Carousel Styles---------------------*/
+
+.rec.rec-arrow {
+  background-color: #b91c1c;
+  color: #fff;
+  position: absolute;
+  transform: translateY(-3rem);
+  z-index: 1;
+}
+.re.rec-arrow-left {
+  left: 1rem;
+}
+.rec-arrow-right {
+  right: 1rem;
+}
+.bqCWu:disabled {
+  background-color: rgba(206, 206, 206, 0.575);
+  color: rgba(0, 0, 0, 0.301);
+}
+.rec.rec-arrow:enabled:hover,
+.re.rec-arrow:enabled:focus {
+  background-color: #fff !important;
+  color: #b91c1c;
+}
+.rec.rec-dot_active {
+  background-color: #b91c1c;
+  box-shadow: #b91c1c 0px 0px 1px 3px;
+}
+.vUlQj:hover,
+.vUlQj:focus {
+  background-color: #b91c1c;
+  box-shadow: #b91c1c 0px 0px 1px 3px !important;
+}
+.sc-aXZVg:focus:enabled,
+.sc-aXZVg:active:enabled {
+  background-color: #b91c1c !important;
+}
+
+/*------------------------Elastic Carousel Styles---------------------*/
+
 :root {
   --header-height: 5rem;
 }
@@ -49,9 +89,6 @@
   transition: transform 0.5s, opacity 0.3s;
   opacity: 0;
 }
-.bqCWu {
-  background-color: red;
-}
 
 @media (min-width: 768px) {
   .hamburger-menu {
@@ -73,5 +110,9 @@
   }
   .navItem-hover:hover::after {
     width: 100%;
+  }
+  .rec.rec-arrow {
+    position: relative;
+    top: auto;
   }
 }
