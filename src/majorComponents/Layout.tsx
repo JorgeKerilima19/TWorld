@@ -62,7 +62,7 @@ export const Layout = () => {
       >
         <Navbar showNavbar={showNavbar} handleNav={handleSmallMenuDisplay} />
       </header>
-      <main className="md:min-h-screen px-3 py-0 md:py-20 md:px-10 tracking-wider max-w-screen-2xl m-auto">
+      <main className="md:min-h-screen py-0 md:py-20 md:px-10 tracking-wider max-w-screen-2xl m-auto">
         <Outlet />
       </main>
       <Footer />

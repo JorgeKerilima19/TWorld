@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <section className="relative min-h-screen md:min-h-vh flex gap-10 items-center">
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 pl-5">
           <h2 className="text-6xl">About Us</h2>
           <span className="font-light text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
@@ -37,7 +37,9 @@ export const About = () => {
       </div>
       <Clients />
       <Team />
-      <h3 className="text-5xl pb-16 font-semibold">Our Projects</h3>
+      <h3 className="text-5xl pb-16 font-semibold text-center md:text-left">
+        Our Projects
+      </h3>
       <CasesList />
       <Invitation />
     </>

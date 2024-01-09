@@ -50,7 +50,7 @@ export const Footer = () => {
   return (
     <footer className="relative w-full bottom-0 pb-10 bg-red-700 text-white">
       <Newsletter />
-      <div className="pt-8 md:pt-10 flex flex-col px-7 gap-4">
+      <div className="pt-8 md:pt-10 flex flex-col px-4 gap-4">
         <div className="min-w-footerItem flex gap-5">
           <img className="w-8 filter-white" src={youtubeLogo} alt="youtube" />
           <img

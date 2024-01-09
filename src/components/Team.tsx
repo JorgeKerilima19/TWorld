@@ -28,7 +28,7 @@ const team: teamMember[] = [
 export const Team = () => {
   return (
     <div className="py-20">
-      <h3 className="text-5xl pb-16 font-semibold">Our team</h3>
+      <h3 className="text-5xl pb-16 font-semibold text-center md:text-left">Our team</h3>
       <div className="flex flex-wrap gap-8 md:gap-10">
         {team.map((member) => (
           <article

@@ -42,7 +42,7 @@ export const Contact = () => {
             Send Message
           </button>
         </form>
-        <div className="flex flex-col w-full md:w-3/6 gap-y-5 md:pt-10">
+        <div className="flex flex-col w-full md:w-3/6 gap-y-5 md:pt-10 pl-10">
           <h3 className="text-2xl md:text-lg font-semibold">Email</h3>
           <span className="underline text-blue-500">thisemail@gmail.com</span>
           <h3 className="text-2xl md:text-lg font-semibold">Phones</h3>

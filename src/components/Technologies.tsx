@@ -10,7 +10,7 @@ import dribbleLogo from "/dribble.svg";
 
 export const Technologies = () => {
   return (
-    <div className="absolute top-5 md:top-auto flex gap-5 justify-center md:justify-between w-full md:bottom-5 flex-wrap">
+    <div className="absolute top-5 md:top-auto flex gap-5 justify-center md:justify-between md:bottom-5 flex-wrap w-[90%]">
       <div className="flex gap-5 flex-wrap">
         <img className="w-8" src={dribbleLogo} alt="react" />
         <img className="w-8" src={youtubeLogo} alt="react" />

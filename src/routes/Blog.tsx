@@ -2,7 +2,7 @@ import { posts } from "../helpers/data/posts";
 
 export const Blog = () => {
   return (
-    <section className="pt-5 grid">
+    <section className="pt-5 grid pl-2">
       <h2 className="text-4xl font-bold">Blog</h2>
       <div className="py-10 grid justify-center gap-y-5">
         {posts.map((post, index) => (

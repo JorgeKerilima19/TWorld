@@ -54,10 +54,10 @@ const services = [
 export const Services = () => {
   return (
     <section>
-      <div className="relative min-h-screen md:min-h-vh flex gap-10 items-center">
-        <div className="flex flex-col gap-10">
-          <h2 className="text-6xl">Our Services</h2>
-          <span className="font-light text-lg">
+      <div className="relative min-h-screen md:min-h-vh flex gap-10 items-center justify-center flex-col md:flex-row">
+        <div className="flex flex-col gap-10 items-center pt-10 md:pt-0 md:items-start">
+          <h2 className="text-6xl text-center md:text-left">Our Services</h2>
+          <span className="font-light text-lg text-center sm:text-left pl-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
             tempus purus. Morbi semper, augue.
           </span>

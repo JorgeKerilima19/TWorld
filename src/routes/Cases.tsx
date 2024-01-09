@@ -15,7 +15,7 @@ export const Cases = () => {
             alt="banner"
           />
         </div>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 px-5">
           <h2 className="text-6xl">Case Studies</h2>
           <span className="font-light text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
