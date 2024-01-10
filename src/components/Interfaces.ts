@@ -19,6 +19,7 @@ export interface JobApplication {
   benefits?: string[];
 }
 export interface PostInterface {
+  id: number;
   title: string;
   img: any;
   description: string;

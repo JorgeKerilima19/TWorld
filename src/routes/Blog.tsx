@@ -1,13 +1,17 @@
+import backToTop from "../helpers/backToTop";
 import { posts } from "../helpers/data/posts";
+import { Link } from "react-router-dom";
 
 export const Blog = () => {
   return (
     <section className="pt-5 grid pl-2">
       <h2 className="text-4xl font-bold">Blog</h2>
       <div className="py-10 grid justify-center gap-y-5">
-        {posts.map((post, index) => (
-          <article
-            key={index}
+        {posts.map((post) => (
+          <Link
+            to={`/blog/${post.id}`}
+            key={post.id}
+            onClick={backToTop}
             className="cont grid grid-cols-1 md:grid-cols-3 gap-5 border-b-2 py-5 place-items-center md:place-items-stretch "
           >
             <img
@@ -32,7 +36,7 @@ export const Blog = () => {
               </div>
               <p className="text-lg">{post.description}</p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

@@ -15,6 +15,7 @@ import {
   Services,
   Cases,
 } from "./routes";
+import { BlogPage } from "./routes/BlogPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPage />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/contact" element={<Contact />} />

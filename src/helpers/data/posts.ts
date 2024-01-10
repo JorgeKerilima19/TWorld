@@ -5,6 +5,7 @@ import img3 from "../../assets/images/postImage3.jpg";
 
 export const posts: PostInterface[] = [
   {
+    id: 1,
     title: "UX/UI Design Principles",
     img: img3,
     description:
@@ -15,6 +16,7 @@ export const posts: PostInterface[] = [
     author: "Alice Johnson",
   },
   {
+    id: 2,
     title: "Data Visualization Techniques",
     img: img2,
     description: "Explore effective data visualization methods.",
@@ -24,6 +26,7 @@ export const posts: PostInterface[] = [
     author: "Jane Smith",
   },
   {
+    id: 3,
     title: "Introduction to Web Development",
     img: img1,
     description: "Learn the basics of web development.",
