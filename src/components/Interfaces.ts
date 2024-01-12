@@ -27,4 +27,5 @@ export interface PostInterface {
   readingTime: number;
   category: "Design" | "Development" | "Analytics";
   author: string;
+  content?: string;
 }

@@ -4,6 +4,8 @@ import { Invitation } from "../components";
 import { posts } from "../helpers/data/posts";
 import { PostInterface } from "../components/Interfaces";
 
+import parse from "html-react-parser";
+
 export const BlogPage = () => {
   const { id }: any = useParams();
 
@@ -76,6 +78,7 @@ export const BlogPage = () => {
         dolorum molestiae explicabo debitis rem sit odit? Eum, nobis error quasi
         numquam officia mollitia officiis doloribus facilis fuga vitae.
       </p>
+      {post?.content ? <div>{parse(post?.content)}</div> : "No Content"}
     </article>
   );
 };
