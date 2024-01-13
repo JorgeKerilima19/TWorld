@@ -89,7 +89,21 @@
   transition: transform 0.5s, opacity 0.3s;
   opacity: 0;
 }
+/*------------blog page styles-------------*/
 
+.post-content-container > * {
+  letter-spacing: 0.14rem;
+}
+.post-content-container > h2 {
+  font-size: 1.45rem;
+  padding-bottom: 1rem;
+}
+.post-content-container h2:not(h2:first-child) {
+  padding-top: 2rem;
+}
+.post-content-container > p {
+  padding-bottom: 0.75rem;
+}
 @media (min-width: 768px) {
   .hamburger-menu {
     display: none;
