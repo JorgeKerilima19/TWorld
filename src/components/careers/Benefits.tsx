@@ -6,6 +6,12 @@ const perksAndBenefits: careerFeature[] = [
     name: "Vacation and Sick Coverage",
     description: "Paid vacations up to 21 days and 14 paid sick days per year ",
   },
+  {
+    id: 1,
+    name: "Great work environment",
+    description:
+      "We strongly believe your productivity is linked to your confort",
+  },
 ];
 
 export const Benefits = () => {

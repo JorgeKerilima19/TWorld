@@ -9,15 +9,14 @@ const values: careerFeature[] = [
   },
   {
     id: 1,
-    name: "Growth",
-    description:
-      "There is no need to beat the hell out of you to be better image of yourself",
+    name: "Transparency",
+    description: "We will never promise something we can not do",
   },
   {
     id: 2,
-    name: "Growth",
+    name: "People first",
     description:
-      "There is no need to beat the hell out of you to be better image of yourself",
+      "To be a better you; we asure you we got your back to face any problem",
   },
 ];
 

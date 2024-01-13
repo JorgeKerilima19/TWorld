@@ -6,7 +6,7 @@ import { availableJobs } from "../../helpers/data/openPositions";
 
 export const OpenPositions = () => {
   return (
-    <section className="pl-5 md:pl-10 pt-16 grid">
+    <section className="pl-5 md:pl-10 py-16 grid">
       <div>
         <h3 className="text-4xl font-semibold pb-16">Open positions</h3>
         <p className="text-xl">

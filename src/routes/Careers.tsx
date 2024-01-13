@@ -12,7 +12,7 @@ export const Careers = () => {
     <>
       <section className="min-h-screen md:min-h-vh flex gap-10 items-center relative overflow-hidden pl-5">
         <div className="flex flex-col gap-10">
-          <h2 className="text-6xl">Careers at Dworld</h2>
+          <h2 className="text-6xl">Careers at Techworld</h2>
           <span className="font-light text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
             tempus purus. Morbi semper, Lorem ipsum dolor sit, amet consectetur
