@@ -21,17 +21,17 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/tworld/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPage />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/cases" element={<Cases />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/tworld/about" element={<About />} />
+          <Route path="/tworld/blog" element={<Blog />} />
+          <Route path="/tworld/blog/:id" element={<BlogPage />} />
+          <Route path="/tworld/careers" element={<Careers />} />
+          <Route path="/tworld/cases" element={<Cases />} />
+          <Route path="/tworld/contact" element={<Contact />} />
+          <Route path="/tworld/services" element={<Services />} />
         </Route>
-        <Route path="/*" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Provider>
   );
