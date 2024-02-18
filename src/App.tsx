@@ -21,15 +21,15 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/tworld/" element={<Layout />}>
+        <Route path="/TWorld/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/tworld/about" element={<About />} />
-          <Route path="/tworld/blog" element={<Blog />} />
-          <Route path="/tworld/blog/:id" element={<BlogPage />} />
-          <Route path="/tworld/careers" element={<Careers />} />
-          <Route path="/tworld/cases" element={<Cases />} />
-          <Route path="/tworld/contact" element={<Contact />} />
-          <Route path="/tworld/services" element={<Services />} />
+          <Route path="/TWorld/about" element={<About />} />
+          <Route path="/TWorld/blog" element={<Blog />} />
+          <Route path="/TWorld/blog/:id" element={<BlogPage />} />
+          <Route path="/TWorld/careers" element={<Careers />} />
+          <Route path="/TWorld/cases" element={<Cases />} />
+          <Route path="/TWorld/contact" element={<Contact />} />
+          <Route path="/TWorld/services" element={<Services />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
