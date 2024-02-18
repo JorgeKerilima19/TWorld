@@ -7,6 +7,7 @@ import youtubeLogo from "/youtube.svg";
 import instagramLogo from "/instagram.svg";
 import twitterLogo from "/twitter.svg";
 import FooterDetailsItems from "./FooterDetailsItems";
+import backToTop from "../helpers/backToTop";
 
 const footerElements: {
   title: string;
@@ -26,7 +27,7 @@ const footerElements: {
   },
   {
     title: "Company",
-    items: ["Cases", "Services", "Blog", "Careers", "Contact", "About us"],
+    items: ["Cases", "Services", "Blog", "Careers", "Contact", "About"],
   },
 ];
 
@@ -83,7 +84,8 @@ export const Footer = () => {
                         return (
                           <Link
                             key={index}
-                            to=""
+                            to={`${item.toLowerCase()}`}
+                            onClick={backToTop}
                             className="hover:after:w-5/6 relative after:-bottom-1 after:left-0 after:content[''] after:h-[2px] after:0 after:absolute after:bg-white"
                           >
                             {item}

@@ -2,6 +2,9 @@ import img from "/featuresSVG/JsFeature1.svg";
 import { ServiceCard } from "../components/service";
 import { Clients, Invitation, Technologies } from "../components";
 
+import book from "../assets/media/book.gif";
+import bookStatic from "../assets/media/bookStatic.png";
+
 const services = [
   {
     title: "Software Development",
@@ -54,7 +57,7 @@ const services = [
 export const Services = () => {
   return (
     <section>
-      <div className="relative min-h-screen md:min-h-vh flex gap-10 items-center justify-center flex-col md:flex-row">
+      <div className="relative min-h-screen md:min-h-vh flex gap-10 items-center justify-between flex-col md:flex-row">
         <div className="flex flex-col gap-10 items-center pt-10 md:pt-0 md:items-start">
           <h2 className="text-6xl text-center md:text-left">Our Services</h2>
           <span className="font-light text-lg text-center sm:text-left pl-2">
@@ -62,7 +65,15 @@ export const Services = () => {
             tempus purus. Morbi semper, augue.
           </span>
         </div>
-        <img src={img} alt="" />
+        <picture>
+          <source media="(min-width:640px)" srcSet={book}></source>
+          <source media="(min-width:465px)" srcSet={bookStatic}></source>
+          <img
+            className="max-w-sm max-h-40"
+            src={bookStatic}
+            alt="Book Image"
+          />
+        </picture>
         <Technologies />
       </div>
       <div className="grid gap-y-20 w-full">

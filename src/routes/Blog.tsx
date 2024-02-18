@@ -9,7 +9,7 @@ export const Blog = () => {
       <div className="py-10 grid justify-center gap-y-5">
         {posts.map((post) => (
           <Link
-            to={`/blog/${post.id}`}
+            to={`/TWorld/blog/${post.id}`}
             key={post.id}
             onClick={backToTop}
             className="cont grid grid-cols-1 md:grid-cols-3 gap-5 border-b-2 py-5 place-items-center md:place-items-stretch "

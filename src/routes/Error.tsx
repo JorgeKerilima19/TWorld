@@ -23,7 +23,7 @@ export const Error = () => {
         </span>
         <Link
           className=" bg-red-700 text-white px-8 py-2 text-lg rounded-md  "
-          to="/"
+          to="/TWorld/"
         >
           <button>Go back Home</button>
         </Link>
