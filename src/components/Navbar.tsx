@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import backToTop from "../helpers/backToTop";
 
@@ -24,7 +24,7 @@ export const Navbar = ({ showNavbar, handleNav }: any) => {
             backToTop();
             handleNav;
           }}
-          to={"/"}
+          to={"/TWorld/"}
           className="flex gap-2 items-center"
         >
           <img src={logo} alt="logo" width={50} />
@@ -61,9 +61,11 @@ export const Navbar = ({ showNavbar, handleNav }: any) => {
               </li>
             ))}
           </ul>
-          <button className="bg-transparent hover:bg-red-700 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent hover border-b-red-700 border-b-2 rounded">
-            Chat with Us
-          </button>
+          <Link to="/TWorld/contact/">
+            <button className="bg-transparent hover:bg-red-700 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent hover border-b-red-700 border-b-2 rounded">
+              Chat with Us
+            </button>
+          </Link>
         </div>
       </nav>
     </>

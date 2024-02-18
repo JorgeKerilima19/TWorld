@@ -9,7 +9,7 @@ export const Invitation = () => {
         <span>
           <Link
             className="text-red-700 underline underline-offset-8"
-            to={"/contact"}
+            to={"/TWorld/contact"}
             onClick={backToTop}
           >
             saying hi
