@@ -5,12 +5,12 @@ import backToTop from "../helpers/backToTop";
 import logo from "../assets/images/logo.svg";
 
 const menuItems = [
-  { to: "/cases", label: "Cases" },
-  { to: "/services", label: "Services" },
-  { to: "/about", label: "About us" },
-  { to: "/careers", label: "Careers" },
-  { to: "/blog", label: "Blog" },
-  { to: "/contact", label: "Contact us" },
+  { to: "/TWorld/cases", label: "Cases" },
+  { to: "/TWorld/services", label: "Services" },
+  { to: "/TWorld/about", label: "About us" },
+  { to: "/TWorld/careers", label: "Careers" },
+  { to: "/TWorld/blog", label: "Blog" },
+  { to: "/TWorld/contact", label: "Contact us" },
 ];
 
 export const Navbar = ({ showNavbar, handleNav }: any) => {
